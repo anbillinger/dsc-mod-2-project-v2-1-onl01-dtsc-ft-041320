@@ -37,7 +37,7 @@ def main():
 		samp_df[zip_col] = 1
 		zipcheck=True
 	else:
-		print("Sorry, couldn't find that zip code. Using only living area")
+		print("Sorry, couldn't find that zip code. Using only living area.")
 		zipcheck=False
 	samp_df['log_sqft_living'] = np.log(sqft)
 	prediction = kc_county_houseprice_predictor.predict(samp_df)
